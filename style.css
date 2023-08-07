@@ -27,15 +27,36 @@ body {
     margin: auto 0;
     width: 100%;
     max-width: 350px;
+    position: relative;
 }
 
 img {
     border-radius: 8px;
 }
 
-img:hover {
+.overlay { 
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 62%;
+    border-radius: 8px;
+    background-color: hsl(178, 100%, 50%);
+    opacity: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay img {
+    color:hsl(0, 0%, 100%);
+}
+
+.overlay:hover {
     cursor: pointer;
-    color: hsl(178, 100%, 50%);
+    transition: ease all 0.5s;
+    opacity: .5;
 }
 
 h1 {
@@ -49,6 +70,7 @@ h1 {
 h1:hover {
     cursor: pointer;
     color: hsl(178, 100%, 50%);
+    transition: ease all 0.5s;
 }
 
 h2, h3 {
@@ -77,6 +99,7 @@ span {
 span:hover {
     color: hsl(178, 100%, 50%);
     cursor: pointer;
+    transition: ease all 0.5s;
 }
 
 .bid__wrapper {
